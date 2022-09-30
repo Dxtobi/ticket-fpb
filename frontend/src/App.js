@@ -60,7 +60,7 @@ function App() {
         {auth && <button onClick={() => {
           sessionStorage.removeItem('token')
           setAuth(false)
-          window.location.reload()
+          
           }} className='linkticket' >LOG OUT</button>}
       </div>
    </Router>
