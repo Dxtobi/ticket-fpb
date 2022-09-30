@@ -21,7 +21,7 @@ app.use(function(req,res){
     res.json(err)
 })
 
-const monogUrl='mongodb://localhost:27017/BusBookingCollection'
+const monogUrl=process.env.MONGO_DB || 'mongodb://localhost:27017/BusBookingCollection'
 mongoose.connect(monogUrl,{useNewUrlParser:true})
 
 
