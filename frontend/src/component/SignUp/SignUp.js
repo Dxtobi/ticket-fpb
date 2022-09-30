@@ -137,6 +137,7 @@ const SignUp = ({signup,setSignup}) => {
                 })
                 setResponse(response.data.message)
                 setSignup(!signup)
+                
                 console.log(response)
             }
         }
@@ -166,7 +167,7 @@ const SignUp = ({signup,setSignup}) => {
                     <div style={{ color: "red" }}>{pswd}</div>
                     <br/>
                         <button type="submit" className='my-input' onClick={(e) => {
-                            setSignup(!signup)
+                           
                             handleSubmit(e)
                         }}>REGISTER</button>
                 </div>
