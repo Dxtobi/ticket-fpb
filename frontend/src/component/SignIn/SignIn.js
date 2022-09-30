@@ -9,7 +9,7 @@ const SignIn = ({ history }) => {
       if (token) {
         window.location.replace('/landing')
       }
-    }, [token])
+    }, [])
     
     const [details,setDetails]=useState({
         email:"",
