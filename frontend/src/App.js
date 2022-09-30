@@ -18,9 +18,9 @@ function App() {
 
   useEffect(()=>{
     if(sessionStorage.getItem('token')){
-      return(
+      
         setAuth(true)
-        )
+        
     }
     
   }, [])
