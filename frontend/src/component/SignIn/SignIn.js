@@ -7,7 +7,7 @@ const SignIn = ({ history }) => {
     const token=sessionStorage.getItem("token")
     useEffect(() => {
       if (token) {
-        window.location.replace('/landing')
+       // window.location.replace('/landing')
       }
     }, [])
     

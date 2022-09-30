@@ -18,11 +18,11 @@ function App() {
 
   useEffect(()=>{
     if(sessionStorage.getItem('token')){
-      
+      console.log('called')
         setAuth(true)
         
     }
-    
+    console.log('calling')
   }, [])
   return (
     <Router>
@@ -44,7 +44,7 @@ function App() {
       if(auth){
         return(<Landing {...props}/>)
       }else{
-          return( <Redirect path='/'/>)
+          return( <Redirect to='/' path='/'/>)
       }
         }} />
       
