@@ -15,11 +15,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(root));
 //app.use(morgan('dev'))
 
-app.use(function(req,res){
-    const err=new Error("not found")
-    err.status=404
-    res.json(err)
-})
+
 
 const monogUrl=process.env.MONGO_DB || 'mongodb://localhost:27017/BusBookingCollection'
 mongoose.connect(monogUrl,{useNewUrlParser:true})
@@ -34,7 +30,7 @@ if(process.env.NODE_ENV === 'production'){
   
   console.log('😸', path.join(__dirname, "frontend/build"), '😸')
 }
-  
+
 app.get("*", (req, res) => {
  
     if (!req.path.includes('api')) {
@@ -44,9 +40,10 @@ app.get("*", (req, res) => {
     } else {
       console.log('this is the error 😸 //hahahah 😸 /hahahah😸')
         }
-  })
+})
 
-  app.use('/api',api)
+app.use('/api', api)
+
 const db=mongoose.connection
 
 

@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useEffect, useState} from 'react';
 import './App.css';
 import SignIn from './component/SignIn/SignIn';
 import Landing from './component/landing/Landing';
@@ -14,10 +14,15 @@ import SearchConfirm from './component/confirm/confirm';
 
 
 function App() {
+ const [auth, setAuth] = useState(false)
+
   useEffect(()=>{
-    return(
-    console.log("refresh")
-    )
+    if(sessionStorage.getItem('token')){
+      return(
+        setAuth(true)
+        )
+    }
+    
   })
   return (
     <Router>
@@ -29,14 +34,14 @@ function App() {
           <h2>POLY<br/>CONSULT<br/>TICKETING</h2>
         </div>
         {
-          sessionStorage.getItem('token') && <Link className='linkticket' to='/mytickets'>VIEW TICKETS</Link>
+          auth && <Link className='linkticket' to='/mytickets'>VIEW TICKETS</Link>
         }
       </div>
     <Switch>
       <Route path='/' exact render={props =>  <SignIn {...props} />}/>
       <Route path='/landing' render={props=> {
 
-      if(sessionStorage.getItem('token')){
+      if(auth){
         return(<Landing {...props}/>)
       }else{
           return( <Redirect path='/'/>)
@@ -52,8 +57,9 @@ function App() {
           <img className="img-fluid_" alt="img" src={'./fpblogo.jpg'} />
           <h2>POLY<br/>CONSULT<br/>TICKETING</h2>
         </div>
-        {sessionStorage.getItem('token') && <button onClick={() => {
+        {auth && <button onClick={() => {
           sessionStorage.removeItem('token')
+          setAuth(false)
           window.location.reload()
           }} className='linkticket' >LOG OUT</button>}
       </div>
