@@ -1,0 +1,95 @@
+
+.nav-land{
+    position: relative;
+    top:15px;
+    left:80%;
+    display:flex;
+    width:20%;
+    flex-wrap: wrap;
+}
+.nav-land button{
+    margin-left:15px;
+}
+.landing {
+    width: 80%;
+    padding: 10px;
+    margin: 50px auto;
+    border-radius: 4px;
+}
+.back-btn{
+        text-align: center;
+        margin: 20px;
+    }
+
+.divider {
+    margin: 28px auto;
+}
+.form-control_ {
+    width: 100%;
+    padding: 11px;
+    margin: 2px 0px;
+    border-radius: 50px;
+    outline: none;
+}
+.form-control_btn {
+    margin: 20px 0px;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color:white;
+    outline: none;
+    background-color: #007bff;
+    box-shadow: 0px 0px 30px -10px black;
+}
+.landing ul{
+    margin:10px;
+
+}
+
+.isDisabled {
+    cursor: not-allowed;
+    text-decoration: none;
+    pointer-events: none;
+    color:rgb(0, 0, 0);
+  }
+.landing ul li a{
+    font-size: 19px;
+    font-weight: bolder;
+}
+.linkticket {
+    padding: 10px 40px;
+    background: #007bff;
+    color: white;
+    border-radius: 50px;
+}
+.error-div {
+    text-align: center;
+    padding: 10px;
+    background: #c12626;
+    color: white;
+    margin: 17px 0px;
+    border-radius: 50px;
+    box-shadow: 0px 8px 20px -5px #00000087;
+}
+/*.welcome{
+    margin-top: 100px;
+    text-align: center;
+    color: rgb(0, 38, 255);
+    animation-name: wel;
+    animation: wel 10s infinite;
+}
+
+@keyframes wel{
+  0%   {color:red; left:0px; top:0px;}
+  25%  {color:yellow; left:0px; top:0px;}
+  50%  {color:blue; right:0px; top:0px;}
+  75%  {color:cyan; left:0px; top:0px;}
+  100% {color:red; left:0px; top:0px;}
+}
+*/
+

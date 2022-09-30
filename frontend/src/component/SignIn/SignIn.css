@@ -1,0 +1,48 @@
+
+
+button{
+  height:38px;
+}
+
+span{
+  color:red;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: #67bbc9ba;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px -5px #00000078;
+}
+
+.format {
+  width: 80%;
+  height: 50%;
+  position: relative;
+  border-radius: 10px;
+  top: 60px;
+  left: 5%;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  margin: 50px auto;
+}
+.my-input {
+  width: 100%;
+  margin: 9px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+button.my-input {
+  background: #0077ff;
+  color: white;
+}
