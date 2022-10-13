@@ -17,12 +17,9 @@ function App() {
  const [auth, setAuth] = useState(false)
 
   useEffect(()=>{
-    if(t){
-      console.log('called')
+    if(sessionStorage.getItem('token')){
         setAuth(true)
-        
     }
-    console.log('calling')
   }, [])
   return (
     <Router>
