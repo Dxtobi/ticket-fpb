@@ -5,10 +5,11 @@ import './landing.css';
 import { PaystackButton } from 'react-paystack'
 import transfer from '../../api/api';
 //import { Link } from 'react-router-dom';
-
+import {useHistory} from 'react-router-dom'
 
 const Landing = ({history}) => {
     //const [tab, setTab] = useState(1)
+    const navigate = useHistory()
     const [date, handleDate] = useState('')
     const [from, handleFrom] = useState('');
     const [to, handleTo] = useState('');
@@ -38,7 +39,8 @@ const Landing = ({history}) => {
         if (paid) {
             setTimeout(() => {
                 handlePaid(false)
-                window.location.reload()
+                navigate.push('/mytickets')
+               // window.location.reload()
             }, 3000);
         }
 //RESET ALL INPUT

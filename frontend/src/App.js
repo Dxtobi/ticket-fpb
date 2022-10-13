@@ -12,12 +12,12 @@ import {
 import Profile from './component/profile/Profile';
 import SearchConfirm from './component/confirm/confirm';
 
-
+const t = sessionStorage.getItem('token')
 function App() {
  const [auth, setAuth] = useState(false)
 
   useEffect(()=>{
-    if(sessionStorage.getItem('token')){
+    if(t){
       console.log('called')
         setAuth(true)
         
@@ -34,14 +34,14 @@ function App() {
           <h2>POLY<br/>CONSULT<br/>TICKETING</h2>
         </div>
         {
-          auth && <Link className='linkticket' to='/mytickets'>VIEW TICKETS</Link>
+          sessionStorage.getItem('token') && <Link className='linkticket' to='/mytickets'>VIEW TICKETS</Link>
         }
       </div>
     <Switch>
       <Route path='/' exact render={props =>  <SignIn {...props} />}/>
       <Route path='/landing' render={props=> {
 
-      if(auth){
+      if(sessionStorage.getItem('token')){
         return(<Landing {...props}/>)
       }else{
           return( <Redirect to='/' path='/'/>)

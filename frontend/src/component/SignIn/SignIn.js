@@ -2,13 +2,16 @@ import React,{useState, useEffect} from 'react';
 import signIn from '../../api/api'
 import './SignIn.css';
 import SignUp from '../SignUp/SignUp';
-
+import {useHistory} from 'react-router-dom'
 const SignIn = ({ history }) => {
-    const token=sessionStorage.getItem("token")
+    const token = sessionStorage.getItem("token")
+    const navigate = useHistory()
     useEffect(() => {
       if (token) {
        // window.location.replace('/landing')
-      }
+       navigate.push('/landing')
+        }
+        console.log('calling d')
     }, [])
     
     const [details,setDetails]=useState({
@@ -91,7 +94,7 @@ const SignIn = ({ history }) => {
                 }else{
                     console.log(response)
                     sessionStorage.setItem("token",response.data)
-                    history.push('/landing')
+                    navigate.push('/landing')
                     setError('')
                     
             }
