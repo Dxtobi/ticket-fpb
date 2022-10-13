@@ -61,8 +61,8 @@ module.exports = function (router) {
         })
     })
 
-    router.get('/allpayment/:email',function(req,res){
-        paymentInfo.find({email:req.params.email},(err,user)=>{
+    router.post('/allpayment/',function(req,res){
+        paymentInfo.find({email:req.body.email},(err,user)=>{
             if(err){
                 res.json({status:false,message:err})
             }

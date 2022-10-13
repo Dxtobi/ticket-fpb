@@ -15,7 +15,7 @@ const [_data, set_data] = useState([])
             const decoded = jwt_decode(token);
             //console.log(token)
             async function callDb() {
-                const res = await transfer.get('/api/allpayment/' + decoded.email)
+                const res = await transfer.post('/api/allpayment/', {email:decoded.email})
                 console.log(res);
                 let alld = res.data
                 alld.reverse()
