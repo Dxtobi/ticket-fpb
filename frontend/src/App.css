@@ -42,20 +42,22 @@
   left: 0;
   width: 100%;
   margin: 0px;
-  padding: 1px;
+  padding: 5px;
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
   display: flex;
   align-items: center;
-  background: black;
+  background: #2196F3;
   justify-content: space-between;
 }
 .header-inner {
   display: flex;
   align-items: center;
 }
-.header img{
-  height:75px;
+.header img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
 }
 .form-holder {
   height: 100vh;

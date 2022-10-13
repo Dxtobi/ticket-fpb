@@ -26,12 +26,10 @@ function App() {
   }, [])
   return (
     <Router>
-      
-    
       <div className="header">
         <div className='header-inner'>
           <img className="img-fluid" alt="img" src={'./fpblogo.jpg'} />
-          <h2>POLY<br/>CONSULT<br/>TICKETING</h2>
+          <h2 style={{marginLeft:5}}>FPB E-TICKET</h2>
         </div>
         {
           sessionStorage.getItem('token') && <Link className='linkticket' to='/mytickets'>VIEW TICKETS</Link>
@@ -47,7 +45,6 @@ function App() {
           return( <Redirect to='/' path='/'/>)
       }
         }} />
-      
         <Route path='/mytickets' exact render={props => <Profile />} />
         <Route path='/confirm' exact render={props => <SearchConfirm/>}/>
         
@@ -55,7 +52,7 @@ function App() {
     <div className="footer">
         <div className='header-inner'>
           <img className="img-fluid_" alt="img" src={'./fpblogo.jpg'} />
-          <h2>POLY<br/>CONSULT<br/>TICKETING</h2>
+          <h2>FPB E-TICKET</h2>
         </div>
         {auth && <button onClick={() => {
           sessionStorage.removeItem('token')

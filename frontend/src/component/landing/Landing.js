@@ -40,7 +40,7 @@ const Landing = ({history}) => {
             setTimeout(() => {
                 handlePaid(false)
                 navigate.push('/mytickets')
-               // window.location.reload()
+               //window.location.reload()
             }, 3000);
         }
 //RESET ALL INPUT
@@ -68,7 +68,7 @@ const Landing = ({history}) => {
         if (from===to) {
             return handlError('Invalid Entry');
         }
-       // console.log(alldata)
+        console.log(alldata)
         handleNext(true)
         //
         //SCROLE TO THE NEXT STEP (DIV)
