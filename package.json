@@ -15,7 +15,7 @@
     "npm": "8.1.2"
   },
   "keywords": [],
-  "author": "Shubhankeet Senapati",
+  "author": "Joseph Akanbi",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^4.0.1",

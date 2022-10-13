@@ -13,24 +13,23 @@ const [_data, set_data] = useState([])
         try {
             const token = sessionStorage.getItem("token");
             const decoded = jwt_decode(token);
-            console.log(token)
+            //console.log(token)
             async function callDb() {
                 const res = await transfer.get('/api/allpayment/' + decoded.email)
+                console.log(res);
                 let alld = res.data
                 alld.reverse()
                 set_data(alld)
-                console.log(alld)
+                console.log('+++++',alld);
             }
         callDb()
         } catch (error) {
+            console.log('++++++++++++++++');
             console.log(error)
         }
-
-
-
-    
     },[])
-   
+
+
     return (
         <div className='ticket_page'>
             

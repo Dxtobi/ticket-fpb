@@ -29,9 +29,8 @@ if(process.env.NODE_ENV === 'production'){
   app.use(express.static(root));
   
   console.log('😸', path.join(__dirname, "frontend/build"), '😸')
-}
 
-app.get("*", (req, res) => {
+  app.get("*", (req, res) => {
  
     if (!req.path.includes('api')) {
       console.log('says', '😸 hit  me harder 😸 😸 😸😸😸', root, req.path)
@@ -41,6 +40,9 @@ app.get("*", (req, res) => {
       console.log('this is the error 😸 //hahahah 😸 /hahahah😸')
         }
 })
+}
+
+
 
 app.use('/api', api)
 
