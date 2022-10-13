@@ -76,8 +76,8 @@ module.exports = function (router) {
         })
     })
 
-    router.get('/get-value/:value',function(req,res){
-        paymentInfo.findOne({tid:req.params.value},(err,user)=>{
+    router.post('/get-value/',function(req,res){
+        paymentInfo.findOne({tid:req.body.value},(err,user)=>{
             if(err){
                 res.json({status:false,message:err})
             }
