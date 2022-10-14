@@ -12,7 +12,7 @@ const [_data, set_data] = useState(null)
         try {
             console.log(search)
             async function callDb() {
-                const res = await transfer.post('/api/get-value/',  search)
+                const res = await transfer.post('/api/get-value/',  {value:search})
                 let alld = res.data
                 set_data(alld)
                 const d = new Date(), od = new Date(alld.date)

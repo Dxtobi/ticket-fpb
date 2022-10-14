@@ -62,7 +62,7 @@ const Landing = ({history}) => {
     const handleSub = (e) => {
         handlError('');
         const alldata = { date, from, to, amount }
-        if (date===''||from===''||to===''||amount==='') {
+        if (date===''||from===''||to===''|| amount==='') {
             return handlError('All fields are necessary');
         }
         if (from===to) {
