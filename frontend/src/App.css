@@ -50,6 +50,11 @@
   background: #2196F3;
   justify-content: space-between;
 }
+.contact-drivers {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px auto;
+}
 .header-inner {
   display: flex;
   align-items: center;

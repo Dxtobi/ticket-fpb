@@ -3,9 +3,9 @@ import 'react-responsive-modal/styles.css';
 import transfer from '../../api/api';
 //import jwt_decode from 'jwt-decode';
 //import { Link } from 'react-router-dom';
-
+const drivers = [{divers:'Driver1', number:'09090837265'}, {divers:'Driver2', number:'08376382635'}, {divers:'Driver3', number:'09983094765'}, {divers:'Driver4', number:'0992293835'}]
 const SearchConfirm = () => {
-const [_data, set_data] = useState(null)
+    const [_data, set_data] = useState(null)
     const [search, changeSearch] = useState('')
     const [datec, setDate] = useState(false)
     const searchValue = () => {
@@ -67,6 +67,15 @@ const [_data, set_data] = useState(null)
                         }
                         </div>
                 </div>
+            }
+
+            {
+                drivers.map((e, i) => {
+                    return <div key={i} className='contact-drivers'>
+                        <div>{e.divers}</div>
+                        <div>{e.number}</div>
+                    </div>
+                })
             }
         </div>
     );
